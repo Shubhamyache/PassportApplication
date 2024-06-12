@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passport Application History</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body class="bg-light">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="index.html">Passport Application</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="SignUp.html">Signup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="newpassportapp.html"
+              >New Passport Application</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="passport_renewal.html"
+              >Passport Renewal</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="application_status.html"
+              >History</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="feedback_page.html">Feedback</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Passport_payment_bs.html">Payment</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- Main heading -->
+      <h1 class="text-center text-primary mt-5">
+        Passport Application History
+      </h1>
+
+      <!-- Welcome message -->
+      <p class="welcome text-center">Welcome, [User Name]</p>
+
+      <!-- Application history table -->
+      <table class="table table-bordered table-striped mt-3">
+        <thead class="thead-dark">
+          <tr>
+            <th>Application ID</th>
+            <th>Application Date</th>
+            <th>Passport Type</th>
+            <th>Status</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Example row: Approved application -->
+          <tr>
+            <td>123456</td>
+            <td>2024-06-01</td>
+            <td>Standard Passport</td>
+            <td class="application-status approved text-success">Approved</td>
+            <td><a href="#" class="text-primary">View Details</a></td>
+          </tr>
+          <!-- Example row: Pending application -->
+          <tr>
+            <td>654321</td>
+            <td>2024-05-20</td>
+            <td>Official Passport</td>
+            <td class="application-status pending text-secondary">Pending</td>
+            <td><a href="#" class="text-primary">View Details</a></td>
+          </tr>
+          <!-- Example row: Rejected application -->
+          <tr>
+            <td>987654</td>
+            <td>2024-05-15</td>
+            <td>Standard Passport</td>
+            <td class="application-status rejected text-danger">Rejected</td>
+            <td><a href="#" class="text-primary">View Details</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Link to track a new application -->
+      <p class="track-new text-center">
+        <a href="#" class="text-primary">Track a New Application</a>
+      </p>
+    </div>
+  </body>
+</html>

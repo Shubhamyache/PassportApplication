@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>Fresh - Passport Application Form</title>
+    <style>
+      .logo {
+        max-width: 150px;
+        margin: 0 auto;
+      }
+      .header-text {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+      .toplogo {
+        margin-left: 420px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="index.html">Passport Application</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="SignUp.html">Signup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="newpassportapp.html"
+              >New Passport Application</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="passport_renewal.html"
+              >Passport Renewal</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="application_status.html">History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="feedback_page.html">Feedback</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Passport_payment_bs.html">Payment</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container my-5">
+      <div class="toplogo">
+        <img src="passportlogo.jpeg" alt="Logo" class="logo mb-3" />
+        <p class="header-text">
+          PSP Division<br />Ministry of External Affairs, Government of India
+        </p>
+      </div>
+      <div class="text-center mb-4">
+        <h1>Passport Application Form</h1>
+        <h4>Fresh Application</h4>
+        <h5>
+          Renewal / Re-issue of Passport -
+          <a href="Renewal_Passport_Form.html">fill this form instead</a>
+        </h5>
+      </div>
+
+      <form action="/submit_passport_application" method="post">
+        <fieldset class="border p-4 mb-4">
+          <legend class="w-auto"><b>1. Service Required</b></legend>
+          <div class="form-group">
+            <label><b>Type of Application:</b></label
+            ><br />
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="application_type"
+                value="normal"
+                id="normal"
+              />
+              <label class="form-check-label" for="normal">Normal</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="application_type"
+                value="tatkaal"
+                id="tatkaal"
+              />
+              <label class="form-check-label" for="tatkaal">Tatkaal</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="passport_booklet_type"
+              ><b>Type of Passport Booklet:</b></label
+            >
+            <select
+              class="form-control"
+              id="passport_booklet_type"
+              name="passport_booklet_type"
+            >
+              <option value="36_pages">36 Pages</option>
+              <option value="60_pages">60 Pages</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="validity_required"><b>Validity Required:</b></label>
+            <select
+              class="form-control"
+              id="validity_required"
+              name="validity_required"
+            >
+              <option value="10_years">10 Years</option>
+              <option value="up_to_age_18">
+                Up to age 18 (For minors between 15 and 18 years)
+              </option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset class="border p-4 mb-4">
+          <legend class="w-auto"><b>2. Applicant Details</b></legend>
+          <div class="form-group">
+            <label for="given_name"><b>Given Name:</b></label>
+            <input
+              type="text"
+              class="form-control"
+              id="given_name"
+              name="given_name"
+              required
+              minlength="1"
+              maxlength="45"
+            />
+            <small class="form-text text-muted"
+              >[Given Name means First name followed by Middle name (If
+              any)(Initials not allowed)]</small
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="surname"><b>Surname:</b></label>
+            <input
+              type="text"
+              class="form-control"
+              id="surname"
+              name="surname"
+              required
+              minlength="1"
+              maxlength="45"
+            />
+          </div>
+
+          <div class="form-group">
+            <label><b>Are you known by any other names (aliases)?</b></label
+            ><br />
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="known_by_other_names"
+                value="yes"
+                id="alias_yes"
+              />
+              <label class="form-check-label" for="alias_yes">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="known_by_other_names"
+                value="no"
+                id="alias_no"
+              />
+              <label class="form-check-label" for="alias_no">No</label>
+            </div>
+            <input
+              type="text"
+              class="form-control mt-2"
+              name="alias_names"
+              placeholder="If yes, please provide the aliases"
+              minlength="1"
+              maxlength="45"
+            />
+          </div>
+
+          <div class="form-group">
+            <label><b>Have you ever changed your name?</b></label
+            ><br />
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="changed_name"
+                value="yes"
+                id="changed_yes"
+              />
+              <label class="form-check-label" for="changed_yes">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="changed_name"
+                value="no"
+                id="changed_no"
+              />
+              <label class="form-check-label" for="changed_no">No</label>
+            </div>
+            <input
+              type="text"
+              class="form-control mt-2"
+              name="previous_name"
+              placeholder="If yes, please provide the previous name"
+              minlength="1"
+              maxlength="45"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="dob"><b>Date of Birth:</b></label>
+            <input
+              type="date"
+              class="form-control"
+              id="dob"
+              name="dob"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="place_of_birth"
+              ><b>Place of Birth (Village or Town or City):</b></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="place_of_birth"
+              name="place_of_birth"
+              required
+              minlength="1"
+              maxlength="25"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="district"><b>District (If born in India):</b></label>
+            <input
+              type="text"
+              class="form-control"
+              id="district"
+              name="district"
+              required
+              minlength="1"
+              maxlength="25"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="state"><b>State/UT (If born in India):</b></label>
+            <input
+              type="text"
+              class="form-control"
+              id="state"
+              name="state"
+              required
+              minlength="1"
+              maxlength="25"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="region_country"
+              ><b>Region/Country (If born abroad):</b></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="region_country"
+              name="region_country"
+              required
+              minlength="1"
+              maxlength="25"
+            />
+          </div>
+
+          <div class="form-group">
+            <label><b>Gender:</b></label
+            ><br />
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                value="male"
+                id="gender_male"
+              />
+              <label class="form-check-label" for="gender_male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                value="female"
+                id="gender_female"
+              />
+              <label class="form-check-label" for="gender_female">Female</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                value="transgender"
+                id="gender_transgender"
+              />
+              <label class="form-check-label" for="gender_transgender"
+                >Transgender</label
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="marital_status"><b>Marital Status:</b></label>
+            <select
+              class="form-control"
+              id="marital_status"
+              name="marital_status"
+            >
+              <option value="single">Single</option>
+              <option value="married">Married</option>
+              <option value="divorced">Divorced</option>
+              <option value="widow_widower">Widow/Widower</option>
+              <option value="separated">Separated</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="citizenship"><b>Citizenship of India by:</b></label>
+            <select class="form-control" id="citizenship" name="citizenship">
+              <option value="birth">Birth</option>
+              <option value="descent">Descent</option>
+              <option value="registration_naturalization">
+                Registration/Naturalization
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="pan"><b>PAN (If available):</b></label>
+            <input
+              type="text"
+              class="form-control"
+              id="pan"
+              name="pan"
+              minlength="10"
+              maxlength="10"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="voter_id"><b>Voter ID (If available):</b></label>
+            <input
+              type="text"
+              class="form-control"
+              id="voter_id"
+              name="voter_id"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="employment_type"><b>Employment Type:</b></label>
+            <select
+              class="form-control"
+              id="employment_type"
+              name="employment_type"
+            >
+              <option value="government">Government</option>
+              <option value="homemaker">Homemaker</option>
+              <option value="private">Private</option>
+              <option value="psu">PSU</option>
+              <option value="retired">Retired</option>
+              <option value="self_employed">Self Employed</option>
+              <option value="student">Student</option>
+              <option value="unemployed">Unemployed</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="education_qualification"
+              ><b>Educational Qualification:</b></label
+            >
+            <select
+              class="form-control"
+              id="education_qualification"
+              name="education_qualification"
+            >
+              <option value="below_10th">Below 10th</option>
+              <option value="10th_pass">10th Pass</option>
+              <option value="12th_pass">12th Pass</option>
+              <option value="graduate">Graduate</option>
+              <option value="post_graduate">Post Graduate</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="aadhar_no"><b>Aadhar No:</b></label>
+            <input
+              type="text"
+              class="form-control"
+              id="aadhar_no"
+              name="aadhar_no"
+              required
+              minlength="12"
+              maxlength="12"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="visible_distinguishing_mark"
+              ><b>Visible Distinguishing Mark (If any):</b></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="visible_distinguishing_mark"
+              name="visible_distinguishing_mark"
+              minlength="1"
+              maxlength="50"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="emergency_contact"
+              ><b>Emergency Contact Name:</b></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="emergency_contact"
+              name="emergency_contact"
+              required
+              minlength="1"
+              maxlength="35"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="emergency_contact_no"
+              ><b>Emergency Contact Phone Number:</b></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="emergency_contact_no"
+              name="emergency_contact_no"
+              required
+              minlength="10"
+              maxlength="10"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset class="border p-4 mb-4">
+          <legend class="w-auto"><b>3. Family Details</b></legend>
+          <div class="form-group">
+            <label for="father_name"><b>Father's Name:</b></label>
+            <input
+              type="text"
+              class="form-control"
+              id="father_name"
+              name="father_name"
+              required
+              minlength="1"
+              maxlength="35"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="mother_name"><b>Mother's Name:</b></label>
+            <input
+              type="text"
+              class="form-control"
+              id="mother_name"
+              name="mother_name"
+              required
+              minlength="1"
+              maxlength="35"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="legal_guardian_name"
+              ><b>Legal Guardian's Name (If applicable):</b></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="legal_guardian_name"
+              name="legal_guardian_name"
+              minlength="1"
+              maxlength="35"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="spouse_name"><b>Spouse's Name (If married):</b></label>
+            <input
+              type="text"
+              class="form-control"
+              id="spouse_name"
+              name="spouse_name"
+              minlength="1"
+              maxlength="35"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset class="border p-4 mb-4">
+          <legend class="w-auto"><b>4. Address Details</b></legend>
+          <div class="form-group">
+            <label for="present_address"
+              ><b>Present Residential Address:</b></label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="present_address"
+              name="present_address"
+              required
+              minlength="1"
+              maxlength="50"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="present_city"><b>City:</b></label>
+            <input
+              type="text"
+              class="form-control"
+              id="present_city"
+              name="present_city"
+              required
+              minlength="1"
+              maxlength="35"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="present_district"><b>District:</b></label>
+            <input
+              type="text"
+              class="form-control"
+              id="present_district"
+              name="present_district"
+              required
+              minlength="1"
+              maxlength="35"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="present_state"><b>State/UT:</b></label>
+            <input
+              type="text"
+              class="form-control"
+              id="present_state"
+              name="present_state"
+              required
+              minlength="1"
+              maxlength="35"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="present_pin"><b>PIN:</b></label>
+            <input
+              type="text"
+              class="form-control"
+              id="present_pin"
+              name="present_pin"
+              required
+              minlength="6"
+              maxlength="6"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="present_mobile_no"><b>Mobile No:</b></label>
+            <input
+              type="text"
+              class="form-control"
+              id="present_mobile_no"
+              name="present_mobile_no"
+              required
+              minlength="10"
+              maxlength="10"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="present_email"><b>Email:</b></label>
+            <input
+              type="email"
+              class="form-control"
+              id="present_email"
+              name="present_email"
+              required
+            />
+          </div>
+        </fieldset>
+
+        <fieldset class="border p-4 mb-4">
+          <legend class="w-auto"><b>5. Document Upload</b></legend>
+          <div class="form-group">
+            <label for="document_upload"><b>Upload Documents:</b></label>
+            <input
+              type="file"
+              class="form-control-file"
+              id="document_upload"
+              name="document_upload"
+            />
+          </div>
+        </fieldset>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
