@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passport Application Home</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <style>
+      .logo {
+        width: 80px;
+        height: auto;
+      }
+      .header-message {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #343a40;
+      }
+      .card {
+        transition: transform 0.2s;
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+      .footer-section {
+        background-color: #0056b3;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 170px;
+      }
+      .footer-section a {
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <!-- Header Section -->
+    <div class="container-fluid mt-3">
+      <div class="d-flex align-items-start">
+        <img src="passportlogo.jpeg" alt="Logo" class="logo mr-3" />
+        <div class="header-message">
+          Passport Seva<br />
+          PSP Division<br />
+          Ministry of External Affairs, Government of India
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mt-3">
+      <a class="navbar-brand" href="index.html">Passport Seva</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="feedback_page.html">Feedback</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about_us.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="whats_new.html">What's New</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card text-center shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class="fas fa-passport"></i> Apply for New Passport
+              </h5>
+              <p class="card-text">
+                Start your application for a new passport here.
+              </p>
+              <a href="newpassportapp.html" class="btn btn-primary"
+                >Apply Now</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card text-center shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class="fas fa-sync-alt"></i> Renew Passport
+              </h5>
+              <p class="card-text">
+                Renew your existing passport quickly and easily.
+              </p>
+              <a href="passport_renewal.html" class="btn btn-primary"
+                >Renew Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <div class="card text-center shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class="fas fa-tasks"></i> Application Status
+              </h5>
+              <p class="card-text">
+                Check the status of your passport application here.
+              </p>
+              <a href="application_status.html" class="btn btn-primary"
+                >Check Status</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card text-center shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class="fas fa-credit-card"></i> Payment
+              </h5>
+              <p class="card-text">
+                Complete your passport application payment here.
+              </p>
+              <a href="Passport_payment_bs.html" class="btn btn-primary"
+                >Make Payment</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer-section bg-primary text-white text-center py-3">
+      <div class="container">
+        <p>
+          Connect with us on:
+          <a href="https://www.facebook.com" class="text-white">Facebook</a> |
+          <a href="https://www.Twitter.com" class="text-white">Twitter</a> |
+          <a href="https://www.Instagram.com" class="text-white">Instagram</a>
+        </p>
+        <p>
+          Contact Us: <a href="contact.html" class="text-white">Contact Us</a>
+        </p>
+        <p>Customer Care Helpline: 1800-123-456</p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

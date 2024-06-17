@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .hero {
+        background-color: #f8f9fa;
+        padding: 50px 0;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+      .content-section {
+        padding: 40px 0;
+      }
+      .form-section {
+        background-color: #f8f9fa;
+        padding: 40px;
+        border-radius: 8px;
+      }
+      .logo {
+        width: 100px;
+        height: 100px;
+      }
+      .header-message {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #0056b3;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <!-- Header Section -->
+    <div class="container-fluid mt-3">
+      <div class="d-flex align-items-start">
+        <img src="passportlogo.jpeg" alt="Logo" class="logo mr-3" />
+        <div class="header-message">
+          Passport Seva<br />
+          PSP Division<br />
+          Ministry of External Affairs, Government of India
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mt-3">
+      <a class="navbar-brand" href="index.html">Passport Seva</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="feedback_page.html">Feedback</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="about_us.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="whats_new.html">What's New</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>We are here to help you with your passport application queries</p>
+      </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="container content-section">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Contact Information</h2>
+          <p>
+            If you have any questions or need assistance, please feel free to
+            reach out to us through the following methods:
+          </p>
+          <p>
+            <strong>Customer Care Helpline:</strong> 1800-123-456 <br />
+            <strong>Email:</strong> support@passportindia.gov.in <br />
+            <strong>Address:</strong> Passport Seva, PSP Division, Ministry of
+            External Affairs, Government of India, baner, pune - 411051
+          </p>
+        </div>
+        <div class="col-md-6 form-section">
+          <h2>Send Us a Message</h2>
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Your Name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Your Email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                class="form-control"
+                id="subject"
+                placeholder="Subject"
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                rows="4"
+                placeholder="Your Message"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <h2>Frequently Asked Questions</h2>
+          <div class="accordion" id="faqAccordion">
+            <div class="card">
+              <div class="card-header" id="faq1">
+                <h2 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapse1"
+                    aria-expanded="true"
+                    aria-controls="collapse1"
+                  >
+                    How do I apply for a new passport?
+                  </button>
+                </h2>
+              </div>
+              <div
+                id="collapse1"
+                class="collapse show"
+                aria-labelledby="faq1"
+                data-parent="#faqAccordion"
+              >
+                <div class="card-body">
+                  To apply for a new passport, please visit our New Passport
+                  Application page and follow the instructions provided.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="faq2">
+                <h2 class="mb-0">
+                  <button
+                    class="btn btn-link collapsed"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapse2"
+                    aria-expanded="false"
+                    aria-controls="collapse2"
+                  >
+                    How can I track the status of my application?
+                  </button>
+                </h2>
+              </div>
+              <div
+                id="collapse2"
+                class="collapse"
+                aria-labelledby="faq2"
+                data-parent="#faqAccordion"
+              >
+                <div class="card-body">
+                  You can track the status of your application by visiting the
+                  Application Status page and entering your application details.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="faq3">
+                <h2 class="mb-0">
+                  <button
+                    class="btn btn-link collapsed"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#collapse3"
+                    aria-expanded="false"
+                    aria-controls="collapse3"
+                  >
+                    What documents are required for passport renewal?
+                  </button>
+                </h2>
+              </div>
+              <div
+                id="collapse3"
+                class="collapse"
+                aria-labelledby="faq3"
+                data-parent="#faqAccordion"
+              >
+                <div class="card-body">
+                  For passport renewal, you will need to provide your current
+                  passport, proof of address, and any other documents as
+                  specified on the Passport Renewal page.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-primary text-white text-center py-3">
+      <div class="container">
+        <p>
+          Connect with us on:
+          <a href="https://www.facebook.com" class="text-white">Facebook</a> |
+          <a href="https://www.twitter.com" class="text-white">Twitter</a> |
+          <a href="https://www.instagram.com" class="text-white">Instagram</a>
+        </p>
+        <p>
+          Contact Us:
+          <a href="contact_us.html" class="text-white">Contact Us</a>
+        </p>
+        <p>Customer Care Helpline: 1800-123-456</p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

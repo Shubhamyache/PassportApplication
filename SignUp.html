@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passport Application Sign Up</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+      .logo {
+        width: 100px;
+        height: 100px;
+      }
+      .header-message {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #0056b3;
+      }
+      .card {
+        border: none;
+      }
+      .btn-primary {
+        background-color: #0056b3;
+        border-color: #0056b3;
+      }
+      .form-control:focus {
+        box-shadow: none;
+        border-color: #0056b3;
+      }
+      .signup-container {
+        margin-top: 50px;
+      }
+      .signup-heading {
+        font-size: 1.5rem;
+        color: #0056b3;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .footer-section {
+        background-color: #0056b3;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+      .footer-section a {
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <!-- Header Section -->
+    <div class="container-fluid mt-3">
+      <div class="d-flex align-items-start">
+        <img src="passportlogo.jpeg" alt="Logo" class="logo mr-3" />
+        <div class="header-message">
+          Passport Seva<br />
+          PSP Division<br />
+          Ministry of External Affairs, Government of India
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mt-3">
+      <a class="navbar-brand" href="index.html">Passport Seva</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="feedback_page.html">Feedback</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about_us.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="whats_new.html">What's New</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- Sign Up Form -->
+    <div class="container signup-container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h2 class="signup-heading">Create Your Account</h2>
+              <form action="login.html" method="post">
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    name="username"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    name="password"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="confirm-password">Confirm Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="confirm-password"
+                    name="confirm-password"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                  Sign Up
+                </button>
+                <div class="text-center mt-3">
+                  <a href="login.html" class="text-primary d-block"
+                    >Already have an account? Login</a
+                  >
+                  <a href="forgot_password.html" class="text-primary d-block"
+                    >Forgot Password?</a
+                  >
+                  <a href="forgot_username.html" class="text-primary d-block"
+                    >Forgot Username?</a
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="container">
+        <p>
+          Connect with us on:
+          <a href="https://www.facebook.com" class="text-white">Facebook</a> |
+          <a href="https://www.twitter.com" class="text-white">Twitter</a> |
+          <a href="https://www.instagram.com" class="text-white">Instagram</a>
+        </p>
+        <p>
+          Contact Us: <a href="contact.html" class="text-white">Contact Us</a>
+        </p>
+        <p>Customer Care Helpline: 1800-123-456</p>
+      </div>
+    </footer>
+  </body>
+</html>
